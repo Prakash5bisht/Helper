@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\bisht\\Desktop\\Helper\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\values-mn\\values-mn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\bisht\\.gradle\\caches\\transforms-3\\1abdf3652c00337f2bc4702be05fdc90\\transformed\\core-1.6.0\\res\\values-mn\\values-mn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\bisht\\Desktop\\Helper\\build\\path_provider_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\bisht\\.gradle\\caches\\transforms-3\\1abdf3652c00337f2bc4702be05fdc90\\transformed\\core-1.6.0\\res\\values-mn\\values-mn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
