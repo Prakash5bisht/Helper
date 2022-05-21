@@ -28,7 +28,7 @@ class MobileLoginView extends StatelessWidget {
                   Flexible(
                     flex: 2,
                     child: Container(
-                      color: Colors.greenAccent,//Color(0xff304FFE),
+                      color: Color(0xff304FFE),
                       width: size.width,
                       child: Padding(
                         padding: const EdgeInsets.all(48.0),
@@ -103,7 +103,7 @@ class MobileLoginView extends StatelessWidget {
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
                                       return TextFormField(
-                                        initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
+                                        initialValue: '63888',//mobileWebViewTextFieldControllers.getPhoneNumber(),
                                         controller: phoneFieldController,
                                         onChanged: (value){
                                           mobileWebViewTextFieldControllers.changePhoneNumber(value);
