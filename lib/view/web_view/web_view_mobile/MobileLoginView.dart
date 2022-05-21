@@ -28,7 +28,7 @@ class MobileLoginView extends StatelessWidget {
                   Flexible(
                     flex: 2,
                     child: Container(
-                      color: Color(0xff304FFE),
+                      color: Colors.greenAccent,//Color(0xff304FFE),
                       width: size.width,
                       child: Padding(
                         padding: const EdgeInsets.all(48.0),
