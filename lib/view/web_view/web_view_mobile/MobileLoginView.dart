@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:helper/controller/LoginButtonController.dart';
+import 'package:helper/controller/MobileWebViewTextFieldControllers.dart';
 import 'package:helper/model/web_model/UserVerification.dart';
 import 'package:lottie/lottie.dart';
 
@@ -10,6 +11,7 @@ class MobileLoginView extends StatelessWidget {
   final phoneFieldController = TextEditingController();
   final pinFieldController = TextEditingController();
   final controller = Get.put(LoginButtonController());
+  final mobileWebViewTextFieldControllers = MobileWebViewTextFieldControllers();
 
   @override
   Widget build(BuildContext context) {
@@ -99,54 +101,63 @@ class MobileLoginView extends StatelessWidget {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
-                                    child: TextField(
-                                      controller: phoneFieldController,
-                                      keyboardType: TextInputType.number,
-                                      textAlign: TextAlign.center,
-                                      inputFormatters: [
-                                        LengthLimitingTextInputFormatter(12)
-                                      ],
-                                      decoration: InputDecoration(
-                                          hintText: 'Phone Number',
-                                          fillColor: Color(0xffEEEEEE),
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(color: Color(0xff1fe593), width: 2.0),
-                                            borderRadius: BorderRadius.circular(28.0),
+                                    child: Obx( (){
+                                      return TextFormField(
+                                        initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
+                                        controller: phoneFieldController,
+                                        onChanged: (value){
+                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
+                                        },
+                                        keyboardType: TextInputType.number,
+                                        textAlign: TextAlign.center,
+                                        inputFormatters: [
+                                          LengthLimitingTextInputFormatter(12)
+                                        ],
+                                        decoration: InputDecoration(
+                                            hintText: 'Phone Number',
+                                            fillColor: Color(0xffEEEEEE),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(color: Color(0xff1fe593), width: 2.0),
+                                              borderRadius: BorderRadius.circular(28.0),
 
-                                          ),
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(28.0),
-                                          )
-                                      ),
-                                    ),
+                                            ),
+                                            border: OutlineInputBorder(
+                                              borderRadius: BorderRadius.circular(28.0),
+                                            )
+                                        ),
+                                      );
+                                    }),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
-                                    child: TextField(
-                                      controller: pinFieldController,
-                                      onChanged: (text){
-                                        print(text);
-                                      },
-                                      keyboardType: TextInputType.number,
-                                      obscureText: true,
-                                      textAlign: TextAlign.center,
-                                      maxLines: 1,
-                                      inputFormatters: [
-                                        LengthLimitingTextInputFormatter(4)
-                                      ],
-                                      decoration: InputDecoration(
-                                          hintText: 'Your Pin',
-                                          fillColor: Color(0xffEEEEEE),
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(color: Color(0xff1fe593), width: 2.0),
-                                            borderRadius: BorderRadius.circular(28.0),
+                                    child: Obx( (){
+                                      return TextFormField(
+                                        initialValue: mobileWebViewTextFieldControllers.getPassword(),
+                                        controller: pinFieldController,
+                                        onChanged: (value){
+                                          mobileWebViewTextFieldControllers.changePassword(value);
+                                        },
+                                        keyboardType: TextInputType.number,
+                                        obscureText: true,
+                                        textAlign: TextAlign.center,
+                                        maxLines: 1,
+                                        inputFormatters: [
+                                          LengthLimitingTextInputFormatter(4)
+                                        ],
+                                        decoration: InputDecoration(
+                                            hintText: 'Your Pin',
+                                            fillColor: Color(0xffEEEEEE),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(color: Color(0xff1fe593), width: 2.0),
+                                              borderRadius: BorderRadius.circular(28.0),
 
-                                          ),
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(28.0),
-                                          )
-                                      ),
-                                    ),
+                                            ),
+                                            border: OutlineInputBorder(
+                                              borderRadius: BorderRadius.circular(28.0),
+                                            )
+                                        ),
+                                      );
+                                    }),
                                   ),
                                   SizedBox(height: 10.0,),
                                   Obx((){
@@ -155,7 +166,7 @@ class MobileLoginView extends StatelessWidget {
                                       color: Color(0xff1fe593),
                                       onPressed: () {
                                         controller.showProgressIndicator();
-                                        UserVerification().verifyUser(context, phoneFieldController.text, pinFieldController.text);
+                                        UserVerification().verifyUser(context, mobileWebViewTextFieldControllers.getPhoneNumber(), mobileWebViewTextFieldControllers.getPassword());
 
                                       },
                                       child: Container(
