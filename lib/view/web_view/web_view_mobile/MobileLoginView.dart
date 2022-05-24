@@ -5,7 +5,7 @@ import 'package:helper/controller/LoginButtonController.dart';
 import 'package:helper/controller/MobileWebViewTextFieldControllers.dart';
 import 'package:helper/model/web_model/UserVerification.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sizer/sizer.dart';
+
 
 class MobileLoginView extends StatelessWidget {
 
@@ -16,7 +16,7 @@ class MobileLoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   // Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return SafeArea(
         child: Scaffold(
           resizeToAvoidBottomInset: false,
@@ -29,8 +29,8 @@ class MobileLoginView extends StatelessWidget {
                   Flexible(
                     flex: 2,
                     child: Container(
-                      color: Colors.black,//Color(0xff304FFE),
-                      width: 100.w,//size.width,
+                      color: Color(0xff304FFE),
+                      width: size.width,
                       child: Padding(
                         padding: const EdgeInsets.all(48.0),
                         child: Column(
@@ -82,7 +82,7 @@ class MobileLoginView extends StatelessWidget {
                     flex: 1,
                     child: Container(
                       color: Colors.white,
-                      width: 100.w,
+                      width: size.width,
                       child: Center(
                         child: Padding(
                           padding: const EdgeInsets.all(38.0),
@@ -104,11 +104,11 @@ class MobileLoginView extends StatelessWidget {
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
                                       return TextFormField(
-                                        initialValue: '63888',//mobileWebViewTextFieldControllers.getPhoneNumber(),
+                                        initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
                                         controller: phoneFieldController,
-                                        onChanged: (value){
-                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
-                                        },
+//                                        onChanged: (value){
+//                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
+//                                        },
                                         keyboardType: TextInputType.number,
                                         textAlign: TextAlign.center,
                                         inputFormatters: [
@@ -135,9 +135,9 @@ class MobileLoginView extends StatelessWidget {
                                       return TextFormField(
                                         initialValue: mobileWebViewTextFieldControllers.getPassword(),
                                         controller: pinFieldController,
-                                        onChanged: (value){
-                                          mobileWebViewTextFieldControllers.changePassword(value);
-                                        },
+//                                        onChanged: (value){
+//                                          mobileWebViewTextFieldControllers.changePassword(value);
+//                                        },
                                         keyboardType: TextInputType.number,
                                         obscureText: true,
                                         textAlign: TextAlign.center,
