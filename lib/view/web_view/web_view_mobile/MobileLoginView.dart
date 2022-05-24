@@ -16,7 +16,7 @@ class MobileLoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    //Size size = MediaQuery.of(context).size;
     return SafeArea(
         child: Scaffold(
           resizeToAvoidBottomInset: false,
@@ -30,7 +30,7 @@ class MobileLoginView extends StatelessWidget {
                     flex: 2,
                     child: Container(
                       color: Color(0xff304FFE),
-                      width: size.width,
+                      //width: size.width,
                       child: Padding(
                         padding: const EdgeInsets.all(48.0),
                         child: Column(
@@ -82,7 +82,7 @@ class MobileLoginView extends StatelessWidget {
                     flex: 1,
                     child: Container(
                       color: Colors.white,
-                      width: size.width,
+                      //width: size.width,
                       child: Center(
                         child: Padding(
                           padding: const EdgeInsets.all(38.0),
