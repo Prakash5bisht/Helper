@@ -9,10 +9,11 @@ import 'package:lottie/lottie.dart';
 
 class MobileLoginView extends StatelessWidget {
 
+
+  final controller = Get.put(LoginButtonController());
+  final mobileWebViewTextFieldControllers = Get.put(MobileWebViewTextFieldControllers());
   final phoneFieldController = TextEditingController();
   final pinFieldController = TextEditingController();
-  final controller = Get.put(LoginButtonController());
-  final mobileWebViewTextFieldControllers = MobileWebViewTextFieldControllers();
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,6 @@ class MobileLoginView extends StatelessWidget {
         child: Scaffold(
           resizeToAvoidBottomInset: false,
           body: Container(
-            //height: size.height,
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -103,12 +103,12 @@ class MobileLoginView extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
-                                      return TextField(
-                                        //initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
-                                        controller: phoneFieldController,
-//                                        onChanged: (value){
-//                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
-//                                        },
+                                      return TextFormField(
+                                        initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
+                                        //controller: phoneFieldController,
+                                        onChanged: (value){
+                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
+                                        },
                                         keyboardType: TextInputType.number,
                                         textAlign: TextAlign.center,
                                         inputFormatters: [
@@ -132,12 +132,12 @@ class MobileLoginView extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
-                                      return TextField(
-                                        //initialValue: mobileWebViewTextFieldControllers.getPassword(),
-                                        controller: pinFieldController,
-//                                        onChanged: (value){
-//                                          mobileWebViewTextFieldControllers.changePassword(value);
-//                                        },
+                                      return TextFormField(
+                                        initialValue: mobileWebViewTextFieldControllers.getPassword(),
+                                        //controller: pinFieldController,
+                                        onChanged: (value){
+                                          mobileWebViewTextFieldControllers.changePassword(value);
+                                        },
                                         keyboardType: TextInputType.number,
                                         obscureText: true,
                                         textAlign: TextAlign.center,
