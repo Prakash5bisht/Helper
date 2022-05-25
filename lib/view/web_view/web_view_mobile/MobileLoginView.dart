@@ -103,12 +103,12 @@ class MobileLoginView extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
-                                      return TextFormField(
-                                        initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
-                                        //controller: phoneFieldController,
-                                        onChanged: (value){
-                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
-                                        },
+                                      return TextField(
+                                        //initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
+                                        controller: phoneFieldController,
+//                                        onChanged: (value){
+//                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
+//                                        },
                                         keyboardType: TextInputType.number,
                                         textAlign: TextAlign.center,
                                         inputFormatters: [
@@ -132,12 +132,12 @@ class MobileLoginView extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
-                                      return TextFormField(
-                                        initialValue: mobileWebViewTextFieldControllers.getPassword(),
-                                        //controller: pinFieldController,
-                                        onChanged: (value){
-                                          mobileWebViewTextFieldControllers.changePassword(value);
-                                        },
+                                      return TextField(
+                                        //initialValue: mobileWebViewTextFieldControllers.getPassword(),
+                                        controller: pinFieldController,
+//                                        onChanged: (value){
+//                                          mobileWebViewTextFieldControllers.changePassword(value);
+//                                        },
                                         keyboardType: TextInputType.number,
                                         obscureText: true,
                                         textAlign: TextAlign.center,
