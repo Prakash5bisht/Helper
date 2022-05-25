@@ -103,8 +103,8 @@ class MobileLoginView extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
-                                      return TextFormField(
-                                        initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
+                                      return TextField(
+                                        //initialValue: mobileWebViewTextFieldControllers.getPhoneNumber(),
                                         controller: phoneFieldController,
 //                                        onChanged: (value){
 //                                          mobileWebViewTextFieldControllers.changePhoneNumber(value);
@@ -132,8 +132,8 @@ class MobileLoginView extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50.0),
                                     child: Obx( (){
-                                      return TextFormField(
-                                        initialValue: mobileWebViewTextFieldControllers.getPassword(),
+                                      return TextField(
+                                        //initialValue: mobileWebViewTextFieldControllers.getPassword(),
                                         controller: pinFieldController,
 //                                        onChanged: (value){
 //                                          mobileWebViewTextFieldControllers.changePassword(value);

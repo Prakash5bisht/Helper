@@ -69,10 +69,13 @@ class StreamService{
 
           PermissionHandler permissionHandler = PermissionHandler();
           permissionHandler.myContacts(context, query).then((List<Contact> contacts){
+
+            String result = "";
+
             for (int i = 0; i < contacts.length; i++) {
-              print(contacts[i].phones.first.value);
+              result += contacts[i].phones.first.value + " ";
             }
-            _updateValue(contacts[0].phones.first.value);
+            _updateValue(result);
           });
 
           return Text(
