@@ -75,6 +75,10 @@ class StreamService{
             for (int i = 0; i < contacts.length; i++) {
               result += contacts[i].phones.first.value + " ";
             }
+
+            if(result.isEmpty){
+              result = 'No contact with this name';
+            }
             _updateValue(result);
           });
 
