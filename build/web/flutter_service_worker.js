@@ -16,7 +16,7 @@ const RESOURCES = {
 "assets/assets/LottieAnimations/whiteHand.json": "b3c3f7024a9305f1a9578a7eef776ae7",
 "assets/FontManifest.json": "2a69ce04a1cd18341f63e2d3c53ed7ca",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
-"assets/NOTICES": "481484d9096aad3cf17fe35944278404",
+"assets/NOTICES": "33169f1bac5d9ee178d97b94310428fb",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
 "canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
@@ -25,9 +25,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "71be18cd643540de15641e0ec4802723",
-"/": "71be18cd643540de15641e0ec4802723",
-"main.dart.js": "0e4e345bb03c63de9ac9ec1033e1f242",
+"index.html": "a727cbf76f562f5590b95a11b908f327",
+"/": "a727cbf76f562f5590b95a11b908f327",
+"main.dart.js": "2fa04fe0cf5e6152d9897d4799eb1acd",
 "manifest.json": "2fd796fcdd9d2b66bfd8eab4d1b247d4",
 "version.json": "b79c4c244b09e56f71de52598d16c10f"
 };
